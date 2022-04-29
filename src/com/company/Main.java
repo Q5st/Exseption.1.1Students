@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -42,5 +44,10 @@ public class Main {
         } catch (StudentNotFoundException e) {
             e.printStackTrace();
         }
+
+        EnterNewStudent.enterStudentAndAddGroup(new Student(),g1);
+
+        g1.sortStudents();
+        System.out.println(g1.toString());
     }
 }

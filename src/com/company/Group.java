@@ -42,6 +42,10 @@ public class Group {
         return false;
     }
 
+    public void sortStudents(){
+        Arrays.sort(students, Comparator.nullsLast(new StudentLastNameComparator()));
+    }
+
     public Group(String groupName) {
         this.groupName = groupName;
     }
