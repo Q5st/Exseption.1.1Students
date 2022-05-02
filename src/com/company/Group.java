@@ -27,6 +27,7 @@ public class Group {
                     return students[i];
                 }
             } catch (NullPointerException e) {
+                break;
             }
         }
         throw  new StudentNotFoundException();
@@ -34,9 +35,13 @@ public class Group {
 
     public boolean deleteStudentById(int id){
         for (int i = 0; i < students.length; i++) {
-            if (students[i].getId()==id) {
-                students[i]=null;
-                return true;
+            try {
+                if (students[i].getId()==id) {
+                    students[i]=null;
+                    return true;
+                }
+            }catch (NullPointerException e) {
+                break;
             }
         }
         return false;

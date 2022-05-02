@@ -11,12 +11,12 @@ public class Main {
                 new Student("abb", "ABB", Gender.Man, 3),
                 new Student("bbb", "JRD", Gender.Woman, 4),
                 new Student("bbc", "CAB", Gender.Woman, 5),
-                new Student("jkc", "FAB", Gender.Woman, 6),
+                /*new Student("jkc", "FAB", Gender.Woman, 6),
                 new Student("ccc", "HAB", Gender.Woman, 7),
                 new Student("ccd", "EAB", Gender.Man, 8),
                 new Student("rtd", "JAB", Gender.Man, 9),
                 new Student("mhg", "AUT", Gender.Woman, 10),
-                new Student("dde", "OPC", Gender.Woman, 11),
+                new Student("dde", "OPC", Gender.Woman, 11),*/
         };
 
         Group g1 = new Group("First");
