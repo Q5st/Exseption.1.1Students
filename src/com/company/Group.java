@@ -27,7 +27,6 @@ public class Group {
                     return students[i];
                 }
             } catch (NullPointerException e) {
-                break;
             }
         }
         throw  new StudentNotFoundException();
@@ -41,7 +40,6 @@ public class Group {
                     return true;
                 }
             }catch (NullPointerException e) {
-                break;
             }
         }
         return false;
