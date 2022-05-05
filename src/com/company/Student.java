@@ -12,6 +12,8 @@ public class Student extends Human{
     public Student() {
     }
 
+
+
     public int getId() {
         return id;
     }

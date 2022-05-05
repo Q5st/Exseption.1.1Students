@@ -22,11 +22,10 @@ public class Group {
 
     public Student searchStudentByLastname(String lastname) throws StudentNotFoundException{
         for (int i = 0; i < students.length; i++) {
-            try {
+            if(students[i]!=null) {
                 if (students[i].getLastName().equals(lastname)) {
                     return students[i];
                 }
-            } catch (NullPointerException e) {
             }
         }
         throw  new StudentNotFoundException();
@@ -34,12 +33,11 @@ public class Group {
 
     public boolean deleteStudentById(int id){
         for (int i = 0; i < students.length; i++) {
-            try {
+            if(students[i]!=null) {
                 if (students[i].getId()==id) {
                     students[i]=null;
                     return true;
                 }
-            }catch (NullPointerException e) {
             }
         }
         return false;
