@@ -58,5 +58,7 @@ public class Main {
         File directory = new File("C:\\Users\\user\\Documents\\Java\\Exseption.1.1Students");
 
         System.out.println(GroupFileStorage.loadGroupFromCSV(GroupFileStorage.findFileByGroupName(g1.getGroupName()+".csv", directory)).toString());
+
+        System.out.println(g1.noSameStudents());
     }
 }

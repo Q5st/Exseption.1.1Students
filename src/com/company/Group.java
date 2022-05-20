@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Group {
     private String groupName;
@@ -43,6 +44,17 @@ public class Group {
         return false;
     }
 
+    public boolean noSameStudents(){
+        for(int i=0; i<students.length-1; i++){
+            for (int j=i+1; j<students.length; j++){
+                if (students[i].equals(students[j])){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     public void sortStudents(){
         Arrays.sort(students, Comparator.nullsLast(new StudentLastNameComparator()));
     }
@@ -77,5 +89,20 @@ public class Group {
                 "groupName='" + groupName + '\'' +
                 ", students=" + Arrays.toString(students) +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Group group = (Group) o;
+        return Objects.equals(groupName, group.groupName) && Arrays.equals(students, group.students);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(groupName);
+        result = 31 * result + Arrays.hashCode(students);
+        return result;
     }
 }
