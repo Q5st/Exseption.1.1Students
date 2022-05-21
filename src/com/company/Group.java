@@ -47,8 +47,10 @@ public class Group {
     public boolean noSameStudents(){
         for(int i=0; i<students.length-1; i++){
             for (int j=i+1; j<students.length; j++){
-                if (students[i].equals(students[j])){
-                    return false;
+                if(students[i]!=null && students[j]!=null) {
+                    if (students[i].equals(students[j])) {
+                        return false;
+                    }
                 }
             }
         }
